@@ -1,5 +1,6 @@
 # 使用 React 做的 Todo List  
 將 jQuery 做的 Todo List 改用 React 實現  
+這是參與 [Lidemy Mentor Program](https://github.com/Lidemy/mentor-program-kristxeng#%E7%A8%8B%E5%BC%8F%E5%B0%8E%E5%B8%AB%E5%AF%A6%E9%A9%97%E8%A8%88%E7%95%AB) 時的作業
 
 **使用 webpack 作為主要建置工具**  
 React 主要透過 JavaScript 渲染整個網頁，因此 index.html 只剩下 `<div id="root"></div>` 讓 React 可以掛載元件。建置工具使用 webpack 打包成 bundle.js。  
