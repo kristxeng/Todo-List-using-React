@@ -108,7 +108,7 @@ class TodoList extends React.Component {
     return (
       <div className="container-fluid">
       <div className="row  d-flex justify-content-center">
-        <div className="col-md-8">
+        <div className="col-md-8 col-lg-6 col-xl-4">
           <div className="display-3 mt-3">Todo List</div>
           <div className="input-group input-group-lg mb-3">
             <div className="input-group-prepend">
