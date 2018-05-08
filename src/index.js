@@ -107,24 +107,26 @@ class TodoList extends React.Component {
   render() {
     return (
       <div className="container d-flex justify-content-center">
-        <div className="col-md-8">
-          <div className="display-3 mt-3">Todo List</div>
-          <div className="input-group input-group-lg mb-3">
-            <div className="input-group-prepend">
-              <span className="input-group-text">+</span>
+        <div className="row  d-flex justify-content-center">
+          <div className="col-12 col-md-8">
+            <div className="display-3 mt-3">Todo List</div>
+            <div className="input-group input-group-lg mb-3">
+              <div className="input-group-prepend">
+                <span className="input-group-text">+</span>
+              </div>
+              <input type="text" className="form-control" value={this.state.inputValue} onChange={this.handleChange} onKeyPress={this.handleEnter} />
+              <div className="input-group-append">
+                <button className="btn btn-outline-secondary" type="button" onClick={this.handleSubmit}>Add</button>
+              </div>
             </div>
-            <input type="text" className="form-control" value={this.state.inputValue} onChange={this.handleChange} onKeyPress={this.handleEnter} />
-            <div className="input-group-append">
-              <button className="btn btn-outline-secondary" type="button" onClick={this.handleSubmit}>Add</button>
-            </div>
-          </div>
-          <ul className="list-group">
-            
-            {this.state.item.map( item => (
-              <TodoItem key={item.id} itemId={item.id} content={item.content} compeleted={item.compeleted} itemRemove={this.itemRemove} itemCompeleted={this.itemCompeleted}/>
-            ))}
+            <ul className="list-group">
+              
+              {this.state.item.map( item => (
+                <TodoItem key={item.id} itemId={item.id} content={item.content} compeleted={item.compeleted} itemRemove={this.itemRemove} itemCompeleted={this.itemCompeleted}/>
+              ))}
 
-          </ul>
+            </ul>
+          </div>
         </div>
       </div>
     )
